@@ -16,7 +16,7 @@ public class Student {
         this.isPass = false;
     }
 
-    public void addBulkExamNote(int math, int phys, int chem) {
+    public void addBulkExamNote(int math, int phys, int chem, int mathPerf, int physPerf, int chemPerf) {
         if (math >= 0 && math <= 100) {
             this.math.grade = math;
         }
@@ -25,6 +25,15 @@ public class Student {
         }
         if (chem >= 0 && chem <= 100) {
             this.chem.grade = chem;
+        }
+        if (mathPerf >= 0 && mathPerf <= 100) {
+            this.math.perfGrade = mathPerf;
+        }
+        if (physPerf >= 0 && physPerf <= 100) {
+            this.phys.perfGrade = physPerf;
+        }
+        if (chemPerf >= 0 && chemPerf <= 100) {
+            this.chem.perfGrade = chemPerf;
         }
     }
     public void isPass () {
@@ -58,7 +67,10 @@ public class Student {
         System.out.println("=========================");
         System.out.println("Student : " + this.name);
         System.out.println("Mathematics Note : " + this.math.grade);
+        System.out.println("Mathematics Performance Note : " + this.math.perfGrade);
         System.out.println("Physics Note : " + this.phys.grade);
+        System.out.println("Physics Performance Note : " + this.phys.perfGrade);
         System.out.println("Chemistry Note : " + this.chem.grade);
+        System.out.println("Chemistry Performance Note : " + this.chem.perfGrade);
     }
 }

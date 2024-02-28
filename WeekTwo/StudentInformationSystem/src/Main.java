@@ -13,15 +13,15 @@ public class Main {
         chem.addTeacher(t3);
 
         Student s1 = new Student("İnek Şaban", 4, "140144015", math, phys, chem);
-        s1.addBulkExamNote(50,20,40);
+        s1.addBulkExamNote(50,20,40, 30, 60,40);
         s1.isPass();
 
         Student s2 = new Student("Güdük Necmi", 4, "2211133", math, phys, chem);
-        s2.addBulkExamNote(100,50,40);
+        s2.addBulkExamNote(100,50,40, 90,50,60);
         s2.isPass();
 
         Student s3 = new Student("Hayta İsmail", 4, "221121312", math, phys, chem);
-        s3.addBulkExamNote(50,20,40);
+        s3.addBulkExamNote(50,20,40,70,30,60);
         s3.isPass();
     }
 }
