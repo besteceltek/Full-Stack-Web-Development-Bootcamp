@@ -44,7 +44,7 @@ public class Employee {
         }
         return raise;
     }
-    void printEmp() {
+    public String toString() {
         System.out.println("Name: " + this.name);
         System.out.println("Salary: " + this.salary);
         System.out.println("Work Hours: " + this.workHours);
@@ -54,5 +54,6 @@ public class Employee {
         System.out.println("Raise: " + raise);
         System.out.println("Salary with the Tax and Bonus: " + taxSalary);
         System.out.println("Total Salary: " + totalSalary);
+        return null;
     }
 }
