@@ -1,18 +1,31 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         int[] list = {56, 34, 1, 8, 101, -2, -33};
-        System.out.println(Arrays.toString(list));
+
         Scanner input = new Scanner(System.in);
-        System.out.print("Please neter a number: ");
-        int number = input.nextInt();
-        Arrays.sort(list);
+        System.out.print("Bir sayı girin: ");
+        int userInput = input.nextInt();
 
+        boolean minFound = false;
+        boolean maxFound = false;
+        int min = list[0];
+        int max = list[0];
 
-        System.out.println("Minimum Değer " + min);
-        System.out.println("Maximum Değer " + max);
+        for (int i : list) {
+            int diff = userInput - i;
+            if (diff > 0 && (!minFound || diff < userInput - min)) {
+                min = i;
+                minFound = true;
+            } else if (diff < 0 && (!maxFound || -diff < max - userInput)) {
+                max = i;
+                maxFound = true;
+            }
+        }
+
+        System.out.println("Minimum Değer " + (minFound ? min : "Bulunamadı"));
+        System.out.println("Maximum Değer " + (maxFound ? max : "Bulunamadı"));
 
     }
 }
