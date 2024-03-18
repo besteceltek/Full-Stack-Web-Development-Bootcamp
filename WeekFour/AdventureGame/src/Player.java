@@ -1,59 +1,61 @@
-import java.util.Scanner;
+public abstract class Player {
+    private int id, damage, health, money, maxHealth;
+    private String name;
 
-public class Player {
-    private Location location;
-    private GameChar gameChar;
-    private String playerName;
-    private Scanner input = new Scanner(System.in);
-
-    public Player(String playerName) {
-        this.playerName = playerName;
+    public Player(int id, int damage, int maxHealth, int money, String charName) {
+        this.id = id;
+        this.damage = damage;
+        this.maxHealth = maxHealth;
+        this.money = money;
+        this.name = charName;
+        this.health = maxHealth;
     }
 
-    public void selectChar() {
-        GameChar[] charList = {new Samurai(), new Archer(), new Knight()};
-        for (GameChar gameChar : charList) {
-            System.out.println(gameChar.getId() + ". " + gameChar.getCharName() +
-                    "\t| Damage: " + gameChar.getDamage() +
-                    "\t| Health: " + gameChar.getHealth() +
-                    " | Money: " + gameChar.getMoney());
-        }
-        System.out.print("Please choose a character to start the game: ");
-        int selectChar = input.nextInt();
-        if (selectChar >= 1 && selectChar <= charList.length) {
-            gameChar = charList[selectChar - 1];
-            System.out.println(gameChar.getCharName());
-            System.out.println("==========");
-        } else {
-            System.out.println("Selection is not applicable.");
-            System.exit(0);
-        }
+    public int getId() {
+        return id;
     }
 
-    public void selectLocation() {
-        Location[] locations = {new SafeHouse(this), new ToolStore(this)};
-        boolean onLocation = true;
-        while (onLocation) {
-            System.out.println("Locations:");
-            for (Location location : locations) {
-                System.out.println(location.getId() + ". " + location.getName());
-            }
-            System.out.print("Please choose the location you wish to go: ");
-            int selectLocation = input.nextInt();
-            if (selectLocation >= 1 && selectLocation <= locations.length) {
-                location = locations[selectLocation - 1];
-                System.out.println(location.getName());
-                onLocation = location.onLocation();
-                System.out.println("==========");
-            } else {
-                System.out.println("Selection is not applicable.");
-                System.exit(0);
-            }
-        }
-
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getPlayerName() {
-        return playerName;
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public void setMaxHealth(int maxHealth) {
+        this.maxHealth = maxHealth;
     }
 }

@@ -33,3 +33,38 @@ ZIRHLAR
 | Hafif | 1  | 1         | 15   |
 | Orta  | 2  | 3         | 25   |
 | Ağır  | 3  | 5         | 40   |
+
+MEKANLAR
+
+* Güvenli Ev
+
+Özellik : Can Yenileniyor
+
+* Mağaza
+
+Özellik : Destekleyici Eşyalar Satın Almak
+
+* Mağara
+
+Canavar : Zombi (1-3 Adet)
+
+Özellik : Savaş + Ganimet
+
+Eşya : Yemek (Food)
+
+* Orman
+
+Canavar : Vampir (1-3 Adet)
+
+Özellik : Savaş + Ganimet
+
+Eşya : Odun (Firewood)
+
+* Nehir
+
+Canavar : Ayı (1-3 Adet)
+
+Özellik : Savaş + Ganimet
+
+Eşya : Su (Water)
+

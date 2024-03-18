@@ -33,23 +33,4 @@ public abstract class GameChar {
     public String getCharName() {
         return charName;
     }
-
-    public void selectChar() {
-        GameChar[] charList = {new Samurai(), new Archer(), new Knight()};
-        for (GameChar gameChar : charList) {
-            System.out.println(gameChar.getId() + ". " + gameChar.getCharName() +
-                    "\t| Damage: " + gameChar.getDamage() +
-                    "\t| Health: " + gameChar.getHealth() +
-                    " | Money: " + gameChar.getMoney());
-        }
-        System.out.print("Please choose a character to start the game: ");
-        int selectChar = input.nextInt();
-        if (selectChar >= 1 && selectChar <= charList.length) {
-            gameChar = charList[selectChar - 1];
-            System.out.println(gameChar.getCharName());
-        } else {
-            System.out.println("Selection is not applicable.");
-            System.exit(0);
-        }
-    }
 }
