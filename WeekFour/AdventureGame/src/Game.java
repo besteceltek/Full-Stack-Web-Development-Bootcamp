@@ -109,6 +109,12 @@ public class Game {
                 selectLocation = input.nextInt();
             }
 
+            if (this.player.getInventory().getFood() && this.player.getInventory().getFirewood() &&
+                    this.player.getInventory().getWater() && Mine.isClear && selectLocation == 1) {
+                System.out.print("CONGRATS! You have returned to the safe house and won the game!!");
+                break;
+            }
+
             Location location = locations[selectLocation - 1];
             onLocation = location.onLocation();
 
