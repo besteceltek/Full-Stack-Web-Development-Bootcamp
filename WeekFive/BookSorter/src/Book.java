@@ -11,7 +11,7 @@ public class Book implements Comparable<Book>{
 
     @Override
     public int compareTo(Book book) {
-        return this.bookName.compareTo(book.bookName);
+        return getBookName().compareTo(book.getBookName());
     }
 
     public String getBookName() {
