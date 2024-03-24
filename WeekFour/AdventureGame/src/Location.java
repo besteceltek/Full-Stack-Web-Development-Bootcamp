@@ -12,7 +12,10 @@ public abstract class Location {
         this.id = id;
     }
 
+    // Abstract method for onLocation
     public abstract boolean onLocation();
+
+    // Getters & Setters
 
     public String getName() {
         return name;
@@ -28,5 +31,13 @@ public abstract class Location {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 }

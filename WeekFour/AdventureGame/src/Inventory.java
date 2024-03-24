@@ -1,9 +1,26 @@
 public class Inventory {
     private boolean water, food, firewood;
-    private String weaponName, armorName;
-    private int weaponDamage, armorDefence;
+    private Weapon weapon;
+    private Armor armor;
 
-    public boolean isWater() {
+    public Inventory() {
+        this.weapon = new Weapon("Unarmed", 0, 0,0);
+        this.armor = new Armor("Rags", 0, 0, 0);
+    }
+
+    // Method to print Inventory
+    public void printInventory() {
+        System.out.println("---- INVENTORY ----");
+        System.out.println("Weapon: " + this.getWeapon().getName() + "\t| Damage: " + this.getWeapon().getDamage());
+        System.out.println("Armor: " + this.getArmor().getName() + "\t| Shield: " + this.getArmor().getShield());
+        System.out.println("Water: " + this.getWater());
+        System.out.println("Food: " + this.getFood());
+        System.out.println("Firewood: " + this.getFirewood());
+    }
+
+    // Getters & Setters
+
+    public boolean getWater() {
         return water;
     }
 
@@ -11,7 +28,7 @@ public class Inventory {
         this.water = water;
     }
 
-    public boolean isFood() {
+    public boolean getFood() {
         return food;
     }
 
@@ -19,7 +36,7 @@ public class Inventory {
         this.food = food;
     }
 
-    public boolean isFirewood() {
+    public boolean getFirewood() {
         return firewood;
     }
 
@@ -27,35 +44,19 @@ public class Inventory {
         this.firewood = firewood;
     }
 
-    public String getWeaponName() {
-        return weaponName;
+    public Weapon getWeapon() {
+        return weapon;
     }
 
-    public void setWeaponName(String weaponName) {
-        this.weaponName = weaponName;
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 
-    public String getArmorName() {
-        return armorName;
+    public Armor getArmor() {
+        return armor;
     }
 
-    public void setArmorName(String armorName) {
-        this.armorName = armorName;
-    }
-
-    public int getWeaponDamage() {
-        return weaponDamage;
-    }
-
-    public void setWeaponDamage(int weaponDamage) {
-        this.weaponDamage = weaponDamage;
-    }
-
-    public int getArmorDefence() {
-        return armorDefence;
-    }
-
-    public void setArmorDefence(int armorDefence) {
-        this.armorDefence = armorDefence;
+    public void setArmor(Armor armor) {
+        this.armor = armor;
     }
 }

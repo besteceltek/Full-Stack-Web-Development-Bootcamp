@@ -9,6 +9,7 @@ public class Weapon {
         this.price = price;
     }
 
+    // List of weapons
     public static Weapon[] weapons() {
         Weapon[] weapons = new Weapon[3];
         weapons[0] = new Weapon("Pistol", 1, 2, 25);
@@ -17,6 +18,7 @@ public class Weapon {
         return weapons;
     }
 
+    // Method for obtaining Weapon object by its ID number
     public static Weapon getWeaponObjByID(int id) {
         for (Weapon weapon : Weapon.weapons()) {
             if (weapon.getId() == id) {
@@ -25,6 +27,8 @@ public class Weapon {
         }
         return null;
     }
+
+    // Getters & Setters
 
     public String getName() {
         return name;

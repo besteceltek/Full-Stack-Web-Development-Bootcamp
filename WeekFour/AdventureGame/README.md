@@ -17,6 +17,7 @@ CANAVARLAR
 | Zombi   | 1  | 3     | 10     | 4    |
 | Vampir  | 2  | 4     | 14     | 7    |
 | Ayı     | 3  | 7     | 20     | 12   |
+| Yılan   | 4  | 3-6   | 12     | 0    |
 
 SİLAHLAR
 
@@ -68,3 +69,28 @@ Canavar : Ayı (1-3 Adet)
 
 Eşya : Su (Water)
 
+* Maden
+
+Canavar : Yılan (1-5 Adet)
+
+Özellik : Savaş ve Ganimet
+
+Eşya : Para, Silah veya Zırh
+
+### Yenilen yılanlardan düşen eşyalar :
+Silah Kazanma İhtimali : 15% 
+* Tüfek Kazanma İhtimali : 20% 
+* Kılıç Kazanma İhtimali : 30% 
+* Tabanca Kazanma İhtimali : 50% 
+
+Zırh Kazanma İhtimali : 15%
+* Ağır Zırh Kazanma İhtimali : 20% 
+* Orta Zırh Kazanma İhtimali : 30% 
+* Hafif Zırh Kazanma İhtimali : 50%
+
+Para Kazanma İhtimali : 25%
+* 10 Para Kazanma İhtimali: 20%
+* 5 Para Kazanma İhtimali: 30%
+* 1 Para Kazanma İhtimali: 50%
+
+Hiç birşey kazanamama ihtimali : 45%

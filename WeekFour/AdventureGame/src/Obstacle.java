@@ -1,18 +1,17 @@
 public abstract class Obstacle {
-    private int id, damage, health, money;
+    private int id, damage, health, money, maxHealth;
     private String obsName;
 
-    public Obstacle(int id, int damage, int health, int money, String obsName) {
+    public Obstacle(int id, int damage, int maxHealth, int money, String obsName) {
         this.id = id;
         this.damage = damage;
-        this.health = health;
+        this.maxHealth = maxHealth;
         this.money = money;
         this.obsName = obsName;
+        this.health = maxHealth;
     }
 
-    public int obstacleNumber() {
-        return 0;
-    }
+    // Getters & Setters
 
     public int getId() {
         return id;
@@ -35,6 +34,9 @@ public abstract class Obstacle {
     }
 
     public void setHealth(int health) {
+        if (health < 0) {
+            health = 0;
+        }
         this.health = health;
     }
 
@@ -52,5 +54,13 @@ public abstract class Obstacle {
 
     public void setObsName(String obsName) {
         this.obsName = obsName;
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public void setMaxHealth(int maxHealth) {
+        this.maxHealth = maxHealth;
     }
 }

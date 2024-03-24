@@ -1,14 +1,15 @@
 public class Armor {
     private String name;
-    private int id, dodge, price;
+    private int id, shield, price;
 
-    public Armor(String name, int id, int dodge, int price) {
+    public Armor(String name, int id, int shield, int price) {
         this.name = name;
         this.id = id;
-        this.dodge = dodge;
+        this.shield = shield;
         this.price = price;
     }
 
+    // List of armors
     public static Armor[] armors() {
         Armor[] armors = new Armor[3];
         armors[0] = new Armor("Light", 1, 1, 15);
@@ -17,6 +18,7 @@ public class Armor {
         return armors;
     }
 
+    // Method for obtaining Armor object by its ID number
     public static Armor getArmorObjByID(int id) {
         for (Armor armor : Armor.armors()) {
             if (armor.getId() == id) {
@@ -25,6 +27,8 @@ public class Armor {
         }
         return null;
     }
+
+    // Getters & Setters
 
     public String getName() {
         return name;
@@ -42,12 +46,12 @@ public class Armor {
         this.id = id;
     }
 
-    public int getDodge() {
-        return dodge;
+    public int getShield() {
+        return shield;
     }
 
-    public void setDodge(int dodge) {
-        this.dodge = dodge;
+    public void setShield(int shield) {
+        this.shield = shield;
     }
 
     public int getPrice() {
