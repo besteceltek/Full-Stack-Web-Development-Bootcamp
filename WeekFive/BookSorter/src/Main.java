@@ -38,11 +38,7 @@ public class Main {
         });
 
         // Add books to the TreeSet
-        bookSetComparedByPage.add(harryPotter);
-        bookSetComparedByPage.add(lotr);
-        bookSetComparedByPage.add(gameOfThrones);
-        bookSetComparedByPage.add(prideAndPrejudice);
-        bookSetComparedByPage.add(callOfCthulhu);
+        bookSetComparedByPage.addAll(bookSet);
 
         // Sort books by page number and print them to the console
         System.out.println();
