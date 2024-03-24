@@ -8,9 +8,13 @@ public class Main {
         int index = input.nextInt();
 
         try {
-            System.out.println("Element at index " + index + " is " + array[index]);
+            System.out.println("Element at index " + index + " is " + arrayElementAtIndex(array, index));
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Prompted index " + index + " is out of bounds.");
         }
+    }
+
+    public static int arrayElementAtIndex(int[] array, int index) {
+        return array[index];
     }
 }
