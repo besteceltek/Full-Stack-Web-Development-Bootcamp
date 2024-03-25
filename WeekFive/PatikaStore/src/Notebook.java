@@ -1,7 +1,7 @@
 public abstract class Notebook extends Product {
 
-    public Notebook(int productID, double unitPrice, double discountRate, int stockAmount, String productName,
+    public Notebook(double unitPrice, int stockAmount, String productName,
                     Brand productBrand, int RAM, int storage, double displaySize) {
-        super(productID, unitPrice, discountRate, stockAmount, productName, productBrand, RAM, storage, displaySize);
+        super(unitPrice, stockAmount, productName, productBrand, RAM, storage, displaySize);
     }
 }

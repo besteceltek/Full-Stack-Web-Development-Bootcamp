@@ -2,7 +2,6 @@ public class Product {
     private static int idCounter = 1;
     private int productID;
     private double unitPrice;
-    private double discountRate;
     private int stockAmount;
     private String productName;
     private Brand productBrand;
@@ -10,12 +9,10 @@ public class Product {
     private int storage;
     private double displaySize;
 
-    public Product(int productID, double unitPrice, double discountRate, int stockAmount, String productName,
+    public Product(double unitPrice, int stockAmount, String productName,
                    Brand productBrand, int RAM, int storage, double displaySize) {
-        idCounter++;
-        this.productID = productID;
+        this.productID = idCounter++;
         this.unitPrice = unitPrice;
-        this.discountRate = discountRate;
         this.stockAmount = stockAmount;
         this.productName = productName;
         this.productBrand = productBrand;
@@ -30,10 +27,6 @@ public class Product {
 
     public double getUnitPrice() {
         return unitPrice;
-    }
-
-    public double getDiscountRate() {
-        return discountRate;
     }
 
     public int getStockAmount() {
