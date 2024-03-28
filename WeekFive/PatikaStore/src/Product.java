@@ -21,6 +21,8 @@ public class Product {
         this.displaySize = displaySize;
     }
 
+    // Getters
+
     public int getProductID() {
         return productID;
     }

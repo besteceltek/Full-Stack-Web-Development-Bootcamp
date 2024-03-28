@@ -10,19 +10,13 @@ public class CellPhone extends Product{
         this.batteryPower = batteryPower;
     }
 
+    // Getters
+
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public int getBatteryPower() {
         return batteryPower;
-    }
-
-    public void setBatteryPower(int batteryPower) {
-        this.batteryPower = batteryPower;
     }
 }

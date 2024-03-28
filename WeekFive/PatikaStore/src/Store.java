@@ -2,8 +2,8 @@ import java.util.*;
 
 public class Store {
     private final List<Brand> brands;
-    private List<Product> cellPhones;
-    private List<Product> notebooks;
+    private List<CellPhone> cellPhones;
+    private List<Notebook> notebooks;
 
     private final Scanner input = new Scanner(System.in);
 
@@ -24,6 +24,7 @@ public class Store {
         brands.sort(Comparator.comparing(Brand::getBrandName));
     }
 
+    // Method to handle notebook panel operations
     public void notebookOperations() {
         System.out.println("---- Notebook Operations ----");
         System.out.println("1. Add Notebook");
@@ -53,9 +54,37 @@ public class Store {
         }
     }
 
+    // Method to handle cellphone panel operations
     public void cellphoneOperations() {
+        System.out.println("---- Cellphone Operations ----");
+        System.out.println("1. Add Cellphone");
+        System.out.println("2. Delete Cellphone");
+        System.out.println("3. List Cellphone");
+        System.out.print("Please choose an action(Press 0 to exit the panel): ");
+        int menuSelection = input.nextInt();
+
+        switch (menuSelection) {
+            case 0:
+                break;
+            case 1:
+                System.out.print("How many products will you add? ");
+                int addProduct = input.nextInt();
+                for (int i = 1; i <= addProduct; i++) {
+                    addProduct(addProductInputs(), 2);
+                }
+                break;
+            case 2:
+                System.out.println("Which product would you like to delete? ");
+                int deleteID = input.nextInt();
+                deleteProduct(deleteID);
+                break;
+            case 3:
+                listCellphones();
+                break;
+        }
     }
 
+    // Method to get product info from the user
     public Product addProductInputs() {
         Product product = null;
 
@@ -85,14 +114,15 @@ public class Store {
 
             switch (Main.menuSelection) {
                 case 1:
-                    product = new Product(unitPrice, stockAmount, productName, brand, RAM, storage, displaySize);
+                    product = new Notebook(unitPrice, stockAmount, productName, brand, RAM, storage, displaySize);
                     break;
                 case 2:
                     System.out.print("Battery Power (mAh): ");
                     int batteryPower = input.nextInt();
 
                     System.out.print("Color: ");
-                    String color = input.nextLine();
+                    String color = input.next();
+
                     product = new CellPhone(unitPrice, stockAmount, productName, brand, RAM, storage, displaySize, color, batteryPower);
                     break;
             }
@@ -102,14 +132,15 @@ public class Store {
         return product;
     }
 
+    // Method to add product
     public void addProduct(Product product, int techChoice) {
         if (product instanceof Product) {
             for (Brand brand : brands) {
                 if (product.getProductBrand().getBrandName().equals(brand.getBrandName())) {
                     if (techChoice == 1) {
-                        notebooks.add(product);
+                        notebooks.add((Notebook) product);
                     } else if (techChoice == 2) {
-                        cellPhones.add(product);
+                        cellPhones.add((CellPhone) product);
                     } else {
                         System.out.println("Choice is not applicable.");
                     }
@@ -118,6 +149,7 @@ public class Store {
         }
     }
 
+    // Method to delete product
     public void deleteProduct(int productID) {
         /* Iterator<Product> iterator = cellPhones.iterator();
         while (iterator.hasNext()) {
@@ -130,38 +162,44 @@ public class Store {
         notebooks.removeIf(product -> product.getProductID() == productID);
     }
 
+    // Method to list notebooks
     public void listNotebooks() {
         System.out.println("---- Notebook List ----");
-        System.out.println("--------------");
-        System.out.println("| ID | Product Name |    Price    |  Brand  | Storage | Display | RAM |");
-        System.out.println("--------------");
-        for (Product product : notebooks) {
-            System.out.format("| %-2d | %-12s | %-8.1f TL | %-7s | %-7d | %-7.1f | %-3d |\n",
-                    product.getProductID(), product.getProductName(), product.getUnitPrice(),
-                    product.getProductBrand().getBrandName(), product.getStorage(),
-                    product.getDisplaySize(), product.getRAM());
+        System.out.println("-------------------------------------------------------------------------------");
+        System.out.println("| ID | Product Name |    Price    | Stock |  Brand  | Storage | Display | RAM |");
+        System.out.println("-------------------------------------------------------------------------------");
+        for (Notebook notebook : notebooks) {
+            System.out.format("| %-2d | %-12s | %-8.1f TL | %-7d | %-7s | %-7d | %-7.1f | %-3d |\n",
+                    notebook.getProductID(), notebook.getProductName(), notebook.getUnitPrice(), notebook.getStockAmount(),
+                    notebook.getProductBrand().getBrandName(), notebook.getStorage(),
+                    notebook.getDisplaySize(), notebook.getRAM());
         }
+        System.out.println("-------------------------------------------------------------------------------");
     }
 
+    // Method to list cellphones
     public void listCellphones() {
         System.out.println("---- Cellphone List ----");
-        System.out.println("--------------");
-        System.out.println("| ID | Product Name |    Price    |  Brand  | Storage | Display | RAM | Battery Power | Color |");
-        System.out.println("--------------");
-        for (Product product : cellPhones) {
-            System.out.format("| %-2d | %-12s | %-8.1f TL | %-7s | %-7d | %-7.1f | %-3d | %-7.1f | %-7s\n",
-                    product.getProductID(), product.getProductName(), product.getUnitPrice(),
-                    product.getProductBrand().getBrandName(), product.getStorage(), product.getDisplaySize(),
-                    product.getRAM(), product.);
+        System.out.println("-------------------------------------------------------------------------------------------------------");
+        System.out.println("| ID | Product Name |    Price    | Stock |  Brand  | Storage | Display | RAM | Battery Power | Color |");
+        System.out.println("-------------------------------------------------------------------------------------------------------");
+        for (CellPhone cellPhone : cellPhones) {
+            System.out.format("| %-2d | %-12s | %-8.1f TL | %-7d | %-7s | %-7d | %-7.1f | %-3d | %-7d | %-7s\n",
+                    cellPhone.getProductID(), cellPhone.getProductName(), cellPhone.getUnitPrice(),
+                    cellPhone.getProductBrand().getBrandName(), cellPhone.getStorage(), cellPhone.getDisplaySize(),
+                    cellPhone.getRAM(), cellPhone.getBatteryPower(), cellPhone.getColor());
         }
+        System.out.println("-------------------------------------------------------------------------------------------------------");
     }
 
+    // Method to list available brands
     public void listBrands() {
         System.out.println("---- Brand List ----");
         for (Brand brand : brands) {
             System.out.println("- " + brand.getBrandName());
         }
     }
+
 
     public Brand getBrandByID(int brandID) {
         return brands.get(brandID - 1);
