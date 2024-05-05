@@ -1,7 +1,5 @@
 # Kütüphane Yönetim Uygulaması
 
----
-
 ### 1. Kitap Tablosu
 <img src="/WeekEleven/LibraryManagementSystem/images/Screenshot%202024-05-05%20at%2021.16.07.png">
 
