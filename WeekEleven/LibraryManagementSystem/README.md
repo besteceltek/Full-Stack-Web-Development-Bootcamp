@@ -3,22 +3,22 @@
 ---
 
 ### 1. Kitap Tablosu
-<img src="/images/Screenshot%202024-05-05%20at%2021.16.07.png">
+<img src="/tree/main/WeekEleven/LibraryManagementSystem/images/Screenshot%202024-05-05%20at%2021.16.07.png">
 
 ### 2. Yazar Tablosu
-<img src="/images/Screenshot%202024-05-05%20at%2021.15.52.png">
+<img src="/tree/main/WeekEleven/LibraryManagementSystem/images/Screenshot%202024-05-05%20at%2021.15.52.png">
 
 ### 1. Yayınevi Tablosu
-<img src="/images/Screenshot%202024-05-05%20at%2021.15.59.png">
+<img src="/tree/main/WeekEleven/LibraryManagementSystem/images/Screenshot%202024-05-05%20at%2021.15.59.png">
 
 ### 1. Kategori Tablosu
-<img src="/images/Screenshot%202024-05-05%20at%2021.15.46.png">
+<img src="/tree/main/WeekEleven/LibraryManagementSystem/images/Screenshot%202024-05-05%20at%2021.15.46.png">
 
 ### 1. Kitap - Kategori Tablosu
-<img src="/images/Screenshot%202024-05-05%20at%2021.16.52.png">
+<img src="/tree/main/WeekEleven/LibraryManagementSystem/images/Screenshot%202024-05-05%20at%2021.16.52.png">
 
 ### 1. Kiralama Tablosu
-<img src="/images/Screenshot%202024-05-05%20at%2021.16.17.png">
+<img src="/tree/main/WeekEleven/LibraryManagementSystem/images/Screenshot%202024-05-05%20at%2021.16.17.png">
 
 ---
 
