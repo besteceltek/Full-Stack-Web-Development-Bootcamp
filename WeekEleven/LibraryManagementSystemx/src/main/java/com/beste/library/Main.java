@@ -1,6 +1,6 @@
-package com.beste;
+package com.beste.library;
 
-import com.beste.entity.Book;
+import com.beste.library.entity.Book;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
