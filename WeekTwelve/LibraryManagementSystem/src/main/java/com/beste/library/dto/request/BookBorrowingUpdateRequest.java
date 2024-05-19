@@ -7,7 +7,7 @@ import java.time.LocalDate;
 @Data
 public class BookBorrowingUpdateRequest {
 
-    private String borrowerName;
+    private String name;
     private LocalDate borrowDate;
     private LocalDate returnDate;
 }

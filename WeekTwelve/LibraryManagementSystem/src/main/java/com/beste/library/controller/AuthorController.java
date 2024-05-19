@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 @RequestMapping("/api/v1/authors")
 public class AuthorController {
     private final AuthorService authorService;

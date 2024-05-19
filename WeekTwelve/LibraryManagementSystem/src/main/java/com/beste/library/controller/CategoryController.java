@@ -3,13 +3,11 @@ package com.beste.library.controller;
 import com.beste.library.entity.Category;
 import com.beste.library.service.CategoryService;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 @RequestMapping("/api/v1/categories")
 public class CategoryController {
     private final CategoryService categoryService;

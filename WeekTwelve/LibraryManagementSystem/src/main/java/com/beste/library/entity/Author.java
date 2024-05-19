@@ -14,10 +14,10 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "author_id", unique = true, nullable = false)
-    private Long authorId;
+    private Long id;
 
     @Column(name = "author_name", length = 100, nullable = false)
-    private String authorName;
+    private String name;
 
     @Column(name = "birth_date", nullable = false)
     @Temporal(TemporalType.DATE)

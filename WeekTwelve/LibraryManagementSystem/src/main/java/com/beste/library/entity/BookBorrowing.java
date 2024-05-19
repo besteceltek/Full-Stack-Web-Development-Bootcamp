@@ -13,10 +13,13 @@ public class BookBorrowing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "borrow_id", unique = true, nullable = false)
-    private Long borrowId;
+    private Long id;
 
     @Column(name = "borrow_name", length = 100, nullable = false)
-    private String borrowName;
+    private String name;
+
+    @Column(name = "borrow_email", nullable = false)
+    private String email;
 
     @Column(name = "borrow_date", nullable = false)
     @Temporal(TemporalType.DATE)

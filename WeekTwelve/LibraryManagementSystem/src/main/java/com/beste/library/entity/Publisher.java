@@ -13,10 +13,10 @@ public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "publisher_id", unique = true, nullable = false)
-    private Long publisherId;
+    private Long id;
 
     @Column(name = "publisher_name", length = 100, nullable = false)
-    private String publisherName;
+    private String name;
 
     @Column(name = "establishment_year", nullable = false)
     private Integer establishmentYear;

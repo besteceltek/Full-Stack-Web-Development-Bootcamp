@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.util.Optional;
 
 public interface BookBorrowingRepository extends JpaRepository<BookBorrowing, Long> {
-    Optional<BookBorrowing> findByBorrowerNameAndBorrowDateAndBook(String borrowerName, LocalDate borrowDate, BookRequest bookForBorrowing);
-    Optional<BookBorrowing> findByBorrowerNameAndBorrowDateAndReturnDate(String borrowerName, LocalDate borrowDate, LocalDate returnDate);
+    Optional<BookBorrowing> findByNameAndBorrowDateAndReturnDate(String name, LocalDate borrowDate, LocalDate returnDate);
+
+    Optional<BookBorrowing> findByEmailAndBorrowDateAndBook(String email, LocalDate borrowDate, BookRequest bookForBorrowing);
 }

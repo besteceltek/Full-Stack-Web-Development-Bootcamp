@@ -29,10 +29,10 @@ public class BookBorrowingService {
 
     public BookBorrowing save(BookBorrowingRequest bookBorrowingRequest) {
         Optional<BookBorrowing> isBookBorrowExist = bookBorrowingRepository.
-                findByBorrowerNameAndBorrowDateAndBook(
-                        bookBorrowingRequest.getBorrowerName(),
+                findByEmailAndBorrowDateAndBook(
+                        bookBorrowingRequest.getEmail(),
                         bookBorrowingRequest.getBorrowDate(),
-                        bookBorrowingRequest.getBookForBorrowing()
+                        bookBorrowingRequest.getBook()
                 );
         if (isBookBorrowExist.isEmpty()) {
             return bookBorrowingRepository.save(bookBorrowingMapper.asEntity(bookBorrowingRequest));
@@ -43,8 +43,8 @@ public class BookBorrowingService {
     public BookBorrowing update(Long id, BookBorrowingUpdateRequest bookBorrowingUpdateRequest) {
         Optional<BookBorrowing> bookBorrowingFromDb = bookBorrowingRepository.findById(id);
         Optional<BookBorrowing> isBookBorrowingExist = bookBorrowingRepository.
-                findByBorrowerNameAndBorrowDateAndReturnDate(
-                        bookBorrowingUpdateRequest.getBorrowerName(),
+                findByNameAndBorrowDateAndReturnDate(
+                        bookBorrowingUpdateRequest.getName(),
                         bookBorrowingUpdateRequest.getBorrowDate(),
                         bookBorrowingUpdateRequest.getReturnDate()
                 );

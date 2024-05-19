@@ -7,7 +7,7 @@ import org.mapstruct.MappingTarget;
 
 import java.util.List;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface CategoryMapper {
     Category asOutput(Category category);
     List<Category> asOutput(List<Category> categoryList);

@@ -16,7 +16,7 @@ public class Book {
     private Long bookId;
 
     @Column(name = "book_name", length = 100, nullable = false)
-    private String bookName;
+    private String name;
 
     @Column(name = "publication_year", nullable = false)
     private Integer publicationYear;
