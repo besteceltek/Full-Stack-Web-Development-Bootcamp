@@ -1,5 +1,6 @@
 package com.beste.library.controller;
 
+import com.beste.library.dto.request.PublisherRequest;
 import com.beste.library.dto.response.PublisherResponse;
 import com.beste.library.service.PublisherService;
 import org.springframework.http.HttpStatus;
@@ -26,5 +27,23 @@ public class PublisherController {
     @ResponseStatus(HttpStatus.OK)
     public PublisherResponse findById(@PathVariable("id") Long id) {
         return publisherService.findById(id);
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public PublisherResponse save(@RequestBody PublisherRequest publisherRequest) {
+        return publisherService.save(publisherRequest);
+    }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public PublisherResponse update(@PathVariable("id") Long id, @RequestBody PublisherRequest publisherRequest) {
+        return publisherService.update(id, publisherRequest);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void delete(@PathVariable("id") Long id) {
+        publisherService.delete(id);
     }
 }
