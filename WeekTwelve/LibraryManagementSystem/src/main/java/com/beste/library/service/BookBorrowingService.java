@@ -2,8 +2,10 @@ package com.beste.library.service;
 
 import com.beste.library.dto.request.BookBorrowingRequest;
 import com.beste.library.dto.request.BookBorrowingUpdateRequest;
+import com.beste.library.entity.Book;
 import com.beste.library.entity.BookBorrowing;
 import com.beste.library.mapper.BookBorrowingMapper;
+import com.beste.library.mapper.BookMapper;
 import com.beste.library.repository.BookBorrowingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,6 +19,7 @@ public class BookBorrowingService {
 
     private final BookBorrowingRepository bookBorrowingRepository;
     private final BookBorrowingMapper bookBorrowingMapper;
+    private final BookMapper bookMapper;
 
     public List<BookBorrowing> findAll() {
         return bookBorrowingRepository.findAll();
@@ -34,8 +37,14 @@ public class BookBorrowingService {
                         bookBorrowingRequest.getBorrowDate(),
                         bookBorrowingRequest.getBook()
                 );
+        Book book = bookMapper.asEntity(bookBorrowingRequest.getBook());
         if (isBookBorrowExist.isEmpty()) {
-            return bookBorrowingRepository.save(bookBorrowingMapper.asEntity(bookBorrowingRequest));
+            if (book.getStock() > 0) {
+                bookBorrowingRequest.getBook().setStock(book.getStock() - 1);
+                bookMapper.update(book, bookBorrowingRequest.getBook());
+                return bookBorrowingRepository.save(bookBorrowingMapper.asEntity(bookBorrowingRequest));
+            }
+            throw new RuntimeException("Bu kitap stokta kalmamıştır");
         }
         throw new RuntimeException("Bu kira daha önce kayıt edilmiştir");
     }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/ActivityRecommendation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/ArithmeticOperators" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/ArmstrongNumbers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/BodyMassIndex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/Calculator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/Casting" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/ChineseZodiac" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/CircleArea" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/ClassPassed" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/Combination" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/Diamonds" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/EvenNumbers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/ExponentialNumbers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/Exponentials" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/Fibonacci" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/GPA Calculation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/GcdLcmCalculator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/GreenGrocerCalculator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/HarmonicSeries" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/Horoscope" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/InvertedTriangle" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/KDV_Calculator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/LeapYear" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/LowestToGreatest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/MinMax" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/OddNumbers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/PasswordLogin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/Perfect Numbers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/PlaneTickets" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/PrimeNumbers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/Pythagoras" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeekOne/TaxiMeter" vcs="Git" />
+  </component>
+</project>
