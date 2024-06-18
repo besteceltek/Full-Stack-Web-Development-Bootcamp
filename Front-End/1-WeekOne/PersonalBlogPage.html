@@ -6,7 +6,7 @@
     <style>
         header {
             text-align: center;
-            padding: 1em 0;
+            padding: 0.5em 0;
         }
         body {
             background-color: #f9f9f9;
@@ -14,12 +14,22 @@
             margin: 0;
             padding: 0;
         }
+        nav {
+            width: 250px;
+            margin: 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
         article {
+            width: 800px;
             margin: 20px;
             padding: 20px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
         }
         img {
             display: block;
@@ -36,9 +46,15 @@
         <h1>Welcome to My Personal Blog</h1>
     </header>
 
+    <nav>
+        <a href="#chapter1">My Journey Into Coding</a><br>
+        <a href="#chapter1">Computer Gaming Adventures</a><br>
+        <a href="#chapter1">Cooking Delicious Meals</a>
+    </nav>
+
     <main>
         <!-- First Blog Post -->
-        <article>
+        <article id="chapter1">
             <h2>My Journey into Coding</h2>
             <img src="images/coding_journey.jpg" width="400" alt="A picture of a computer screen with code">
             <p>
@@ -58,7 +74,7 @@
         </article>
 
         <!-- Second Blog Post -->
-        <article>
+        <article id="chapter2">
             <h2>Computer Gaming Adventures</h2>
             <img src="images/gaming_setup.jpg" width="400" alt="A high-end gaming setup with multiple monitors">
             <p>
@@ -78,7 +94,7 @@
         </article>
 
         <!-- Third Blog Post -->
-        <article>
+        <article id="chapter3">
             <h2>Cooking Delicious Meals</h2>
             <img src="images/cooking.jpg" width="400" alt="A table set with a delicious meal">
             <p>
