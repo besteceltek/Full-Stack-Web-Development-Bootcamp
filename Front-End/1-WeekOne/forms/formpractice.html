@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Practice</title>
+    </head>
+    <body>
+        <h2>Kayıt Formu</h2>
+
+        <form>
+            <!-- Fieldset for Personal Information-->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <!-- Text Input-->
+                <div>
+                    <label for="firstname">Name:</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div>
+                    <label for="lastname">Lastname:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+
+                <!-- Date Input -->
+                <div>
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday" required>
+                </div>
+
+                <!-- Radio Button Input -->
+                <div>
+                    <label for="gender">Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male" required>Male
+                    <input type="radio" id="female" name="gender" value="female" required>Female
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <!-- Email Input -->
+                <div>
+                    <label for="email">E-posta:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <!-- Password Input -->
+                <div>
+                    <label for="pwd">Şifre:</label>
+                    <input type="password" id="pwd" name="pwd" minlength="8" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Other</legend>
+                <!-- Select Input -->
+                <div>
+                    <label for="fruit">Favorite Fruit:</label>
+                    <select id="fruit" name="fruit">
+                        <option value="">Please Select...</option>
+                        <option value="apple">Apple</option>
+                        <option value="banana">Banana</option>
+                        <option value="strawberry">Strawberry</option>
+                    </select>
+                </div>
+
+                <!-- Textarea Input -->
+                <div>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
