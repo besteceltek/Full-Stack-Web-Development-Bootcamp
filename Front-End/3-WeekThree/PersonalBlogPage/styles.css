@@ -20,6 +20,8 @@ nav a {
 }
 main h2{
     color: #333;
+}
+.header {
     margin-left: 40px;
 }
 .posts {
@@ -32,6 +34,10 @@ main h2{
 }
 .posts article {
     width: 300px;
+}
+.posts a {
+    color: #333;
+    text-decoration: underline;
 }
 article {
     width: 600px;
