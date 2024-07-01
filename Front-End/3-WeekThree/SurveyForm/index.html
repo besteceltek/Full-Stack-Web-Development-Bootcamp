@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" /> 
+</head>
+<body>
+    <header>
+        <h1 id="title">Survey</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Laudantium nisi natus, inventore cum, provident accusantium voluptate molestias quas quis unde soluta debitis odit aperiam magni laboriosam dolorum iusto. 
+            Accusantium, qui!
+        </p>
+    </header>
+    <main>
+        <form id="survey-form">
+            <fieldset>
+                <div>
+                    <label id="name-label" for="name">Name and Surname</label>
+                    <input id="name" type="text">
+                </div>
+                <div>
+                    <label id="email-label" for="email">E-mail</label>
+                    <input id="email" type="email">
+                </div>
+                <div>
+                    <label id="number-label" for="number">Age</label>
+                    <input id="number" type="number" min="18" max="65">
+                </div>
+                <div>
+                    <select id="dropdown">
+                        <option value="">Select Gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+                <div>
+                    <label id="radio-label" for="radio">Where did you hear us?</label>
+                    <input name="radio" type="radio" value="instagram">Instagram
+                    <input name="radio" type="radio" value="linkedin">Linkedin
+                </div>
+                <div>
+                    <input type="checkbox" value="tos">Terms of Service
+                    <input type="checkbox" value="subscribe">Subscribe for News
+                </div>
+                <div>
+                    <textarea placeholder="Suggestions"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Sign Up">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer></footer>
+    
+
