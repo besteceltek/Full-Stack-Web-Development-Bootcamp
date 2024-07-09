@@ -1,0 +1,69 @@
+::placeholder {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    background-position: 40%;
+    background-size: 6%;
+    background: url('/4-WeekFour/InstagramClone/assets/search-solid.svg') no-repeat;
+}
+
+input.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    background-color: #FAFAFA;
+}
+
+.postuserfont {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    color: black;
+}
+
+.storyphoto {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgb(238, 39, 82);
+    margin-right: 7px;
+}
+
+.storytext {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: black;
+    text-align: center;
+}
+
+.rightpanel {
+    background-color: white;
+    border: none;
+}
+
+.rightpanellinks {
+    text-decoration: none;
+    color: lightgrey;
+}
+
+.rightpanellinks:hover {
+    text-decoration: none;
+    color: lightgrey;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 54px;
+    background-color: white;
+    padding: 2%;
+}
+
+.middlearea-box {
+    max-height: 200px !important;
+}
+
+.card .card-header, .card-footer {
+    background-color: white;
+}
