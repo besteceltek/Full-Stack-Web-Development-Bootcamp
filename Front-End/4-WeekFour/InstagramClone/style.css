@@ -52,7 +52,6 @@ input.empty {
 }
 
 .navbar {
-    position: sticky;
     top: 0;
     z-index: 1;
     height: 54px;
@@ -61,6 +60,7 @@ input.empty {
 
 .middlearea-box {
     max-height: 200px !important;
+    margin-top: 62px;
 }
 
 .card .card-header, .card-footer {
