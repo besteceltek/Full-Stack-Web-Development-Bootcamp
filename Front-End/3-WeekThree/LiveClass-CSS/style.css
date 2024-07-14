@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    padding: 0 0;
+}
+
+#grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.grid-content {
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+#flex {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flex-content {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 10px;
+}
+
+
+#page {
+    display: grid;
+    width: 100vw;
+    min-height: 100vh;
+    grid-template-areas:
+        "head head"
+        "nav main"
+        "foot foot";
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 150px 1fr 100px;
+}
+
+header {
+    background-color: lightblue;
+    grid-area: head;
+}
+
+nav {
+    background-color: lightpink;
+    grid-area: nav;
+}
+
+main {
+    background-color: lightgreen;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+footer {
+    background-color: lightcoral;
+    grid-area: foot;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+#positions {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: lightgray;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.price {
+    background-color: hotpink;
+    padding: 2px 4px;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+#links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    position: absolute;
+    background-color: lime;
+    top: -5px;
+    left: -5px;
+    filter: blur(10px);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.3s linear;
+}
+
+a:hover::after {
+    opacity: 1;
+}
