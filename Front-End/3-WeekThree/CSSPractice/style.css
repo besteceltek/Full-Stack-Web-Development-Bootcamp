@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 6%;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    padding: 10px 8%;
+    position: sticky;
+    top: 0;
+}
+
+.linkler {
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    width: 20vw;
+}
+
+/* Gallery */
+
+.gallery {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
