@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#mainNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+#mainNav .navbar-brand {
+  font-weight: 200;
+}
+#mainNav .navbar-toggler {
+  font-size: 0.75rem;
+  font-weight: 200;
+  padding: 0.75rem;
+  text-transform: uppercase;
+}
+#mainNav .navbar-nav > li.nav-item > a.nav-link {
+  font-size: 0.75rem;
+  font-weight: 200;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link {
+    color: #fff;
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+header.masthead {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: no-repeat center center;
+  background-color: #6c757d;
+  background-size: cover;
+  background-attachment: scroll;
+}
+header.masthead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #212529;
+  opacity: 0.5;
+}
+header.masthead .site-heading {
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .site-heading h1{
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+  }
+
+  header.masthead .site-heading {
+    font-size: 1.5rem;
+  }
+  
+  header.masthead .site-heading h1{
+    font-size: 5rem;
+  }
+}
+  
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+a {
+  color: var(--bs-link-color);
+  text-decoration: none;
+}
