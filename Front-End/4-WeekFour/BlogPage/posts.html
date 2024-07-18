@@ -16,19 +16,25 @@
     <nav class="navbar navbar-expand-md navbar-dark" id="mainNav">
         <div class="container-fluid px-4 px-lg-5">
             <a class="navbar-brand" href="index.html">Blogify</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive" style="background-image: url('https://picsum.photos/id/120/1300/400')">
-                <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link active px-lg-3 py-lg-4" aria-current="page" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="#">Sample Post</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="#">Contact</a></li>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Blogify</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item"><a class="nav-link active px-lg-3 py-lg-4" aria-current="page" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="#">About</a></li>
+                  <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="posts.html">Posts</a></li>
+                  <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="#">Contact</a></li>
                 </ul>
+              </div>
             </div>
         </div>
-    </nav>
+      </nav>
   
     <!-- Page Header -->
     <header class="masthead" style="background-image: url('https://picsum.photos/id/120/1300/400')">
@@ -45,40 +51,10 @@
     </header>
 
     <!-- Main Content-->
-
-    <div class="border-bottom-dark bg-slate sticky-top mb-2">
-        <div class="container-lg">
-            <nav class="navbar navbar-dark navbar-expand-lg">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Blogify</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Blog Posts
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark bg-slate">
-                              <li><a class="dropdown-item" href="#chapter1">My Journey Into Coding</a></li>
-                              <li><a class="dropdown-item" href="#chapter2">Computer Gaming Adventures</a></li>
-                              <li><a class="dropdown-item" href="#chapter3">Cooking Delicious Meals</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-        </div>
-    </div>
-    <main class="container">
-        <div class="row row-cols-1">
-            <div id="#chapter1" class="col my-2">
-                <div class="card p-0">
+    <main class="container" id="posts">
+        <div class="row row-cols-1 justify-content-center">
+            <div id="#chapter1" class="col">
+                <div class="card mb-4 p-0">
                     <img src="https://picsum.photos/id/1/300/200" class="thumbnail card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">My Journey into Coding</h5>
@@ -94,8 +70,8 @@
                     </div>
                 </div>
             </div>
-            <div id="#chapter2" class="col my-2">
-                <div class="card p-0">
+            <div id="#chapter2" class="col">
+                <div class="card mb-4 p-0">
                     <img src="https://picsum.photos/id/6/300/200" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Computer Gaming Adventure</h5>
@@ -114,8 +90,8 @@
                     </div>
                 </div>
             </div>
-            <div id="#chapter3" class="col my-2">
-                <div class="card p-0">
+            <div id="#chapter3" class="col">
+                <div class="card mb-4 p-0">
                     <img src="https://picsum.photos/id/835/300/200" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Cooking Delicious Meals</h5>
@@ -136,9 +112,6 @@
             </div>
         </div>
     </main>
-
-    
-
 
     <!-- Footer-->
     <footer class="border-top">

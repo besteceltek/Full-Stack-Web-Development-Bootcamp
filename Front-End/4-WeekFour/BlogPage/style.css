@@ -5,14 +5,14 @@
 }
 
 #mainNav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1030;
-    border-bottom: 1px solid transparent;
-    background: transparent;
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #mainNav .navbar-brand {
   font-weight: 200;
@@ -29,16 +29,9 @@
   letter-spacing: 0.0625em;
   text-transform: uppercase;
 }
-@media (min-width: 768px) {
-  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-    color: rgba(255, 255, 255, 0.8);
-  }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link {
-    color: #fff;
-  }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
-    color: rgba(255, 255, 255, 0.8);
-  }
+#mainNav .offcanvas {
+  max-width: 35%;
+  max-height: 30%;
 }
 
 header.masthead {
@@ -75,24 +68,49 @@ header.masthead .site-heading h1{
   font-size: 3rem;
 }
 
+@media (max-width: 425px) {
+  header.masthead {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width: 768px) {
+  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link {
+    color: #fff;
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
   header.masthead {
     padding-top: 12.5rem;
     padding-bottom: 12.5rem;
   }
-
   header.masthead .site-heading {
     font-size: 1.5rem;
   }
-  
   header.masthead .site-heading h1{
     font-size: 5rem;
   }
+
+  footer {
+    margin-top: 1.5rem;
+  }
 }
-  
+
+
+#posts .card {
+  max-width: 60%;
+}
+
 footer {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 a {

@@ -16,16 +16,22 @@
     <nav class="navbar navbar-expand-md navbar-dark" id="mainNav">
       <div class="container-fluid px-4 px-lg-5">
           <a class="navbar-brand" href="index.html">Blogify</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive" style="background-image: url('https://picsum.photos/id/120/1300/400')">
-              <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                  <li class="nav-item"><a class="nav-link active px-lg-3 py-lg-4" aria-current="page" href="#">Home</a></li>
-                  <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="#">About</a></li>
-                  <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="#">Sample Post</a></li>
-                  <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="#">Contact</a></li>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Blogify</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link active px-lg-3 py-lg-4" aria-current="page" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="posts.html">Posts</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-lg-4" href="#">Contact</a></li>
               </ul>
+            </div>
           </div>
       </div>
     </nav>
@@ -45,46 +51,46 @@
     </header>
 
     <!-- Main Content-->
-    <main class="container">
-      <div class="row mb-2">
-        <div class="col-md-4">
+    <main class="container" id="content">
+      <div class="row">
+        <div class="col-xl-4 col-lg-6 ">
           <div class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
               <strong class="d-inline-block mb-2 text-primary">Web-Design</strong>
-              <h3 class="mb-0 card-title">My Journey into Coding</h3>
+              <h4 class="mb-0 card-title">My Journey into Coding</h4>
               <div class="mb-1 text-muted">Nov 12</div>
               <p class="card-text mb-auto">I started my coding journey a few years ago and it has been an incredible experience.</p>
               <a href="posts.html#chapter1" class="stretched-link">Continue reading</a>
             </div>
-            <div class="col-auto d-none d-lg-block">
+            <div class="col-auto d-none d-md-block">
                 <img src="https://picsum.photos/id/835/200/250" alt="">
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-xl-4 col-lg-6 ">
             <div class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
                 <strong class="d-inline-block mb-2 text-success">Gaming</strong>
-                <h3 class="mb-0 card-title">Computer Gaming Adventure</h3>
+                <h4 class="mb-0 card-title">Computer Gaming Adventure</h4>
                 <div class="mb-1 text-muted">Nov 11</div>
                 <p class="mb-auto">Aside from coding, I spend a lot of my free time immersed in computer gaming.</p>
                 <a href="posts.html#chapter2" class="stretched-link">Continue reading</a>
               </div>
-              <div class="col-auto d-none d-lg-block">
+              <div class="col-auto d-none d-md-block">
                   <img src="https://picsum.photos/id/6/200/250" alt="">
               </div>
             </div>
           </div>
-        <div class="col-md-4">
+        <div class="col-xl-4 col-lg-6 ">
           <div class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
               <strong class="d-inline-block mb-2 text-danger">Food</strong>
-              <h3 class="mb-0 card-title">Cooking Delicious Meals</h3>
+              <h4 class="mb-0 card-title">Cooking Delicious Meals</h4>
               <div class="mb-1 text-muted">Oct 12</div>
               <p class="card-text mb-auto">I enjoy experimenting with new recipes and creating delicious meals for my family and friends.</p>
               <a href="posts.html#chapter3" class="stretched-link">Continue reading</a>
             </div>
-            <div class="col-auto d-none d-lg-block">
+            <div class="col-auto d-none d-md-block">
                 <img src="https://picsum.photos/id/835/200/250" alt="">
             </div>
           </div>
