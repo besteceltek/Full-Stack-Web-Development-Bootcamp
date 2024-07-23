@@ -15,6 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    document.addEventListener("keydown", (event) => {
+        const key = event.key.toUpperCase();
+        if (keyToSoundMap[key]) {
+            const button = keyToSoundMap[key];
+            const soundFile = soundFileUrl(key);
+            playSound(soundFile);
+            button.classList.add("active");
+            setTimeout(() => button.classList.remove("active"), 200); // Remove 'active' class after 200ms
+        }
+      });
+
     function soundFileUrl(key) {
         let audioUrl;
         switch (key) {
