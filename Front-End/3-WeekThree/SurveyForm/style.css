@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #e94057, #f27121);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin: 0 2%;
+}
+
+.container {
+    background-color: #2e3d55;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #C1CFDF;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    color: #C1CFDF;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #C1CFDF;
+    background-color: #2e3d55;
+    border: 1px solid #7edfdf;
+}
+
+select {
+    width: 100%;
+    color: #7edfdf;
+    background-color: #2e3d55;
+    text-align: center;
+    border: 0;
+    border-bottom: 2px solid #7edfdf;
+}
+
+button {
+    background-color: #2e3d55;
+    border: none;
+    color: #C1CFDF;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0ebbbb;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+input[type="radio"] + label, input[type="checkbox"] + label {
+    display: inline;
+    margin-right: 10px;
+    color: #C1CFDF;
+    font-size: 0.9em;
+}
+
+textarea {
+    resize: none;
+}
+
+select:focus, input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #0ebbbb;
+}
+
+p {
+    color: #C1CFDF;
+}
+
+#name, #email, #age, #suggestions {
+    width: 100%;
+}
