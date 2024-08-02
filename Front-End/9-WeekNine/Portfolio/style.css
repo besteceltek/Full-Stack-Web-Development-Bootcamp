@@ -1,0 +1,64 @@
+* {
+    font-family: "Exo 2", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --secon-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #a21caf;
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 62.5%;
+    background-color: var(--bg-color);
+}
+
+body {
+    color: var(--text-color);
+}
+
+/* Navbar */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar {
+    display: flex;
+    gap: 4rem;
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    transition: all 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
