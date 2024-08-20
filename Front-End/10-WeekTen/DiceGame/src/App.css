@@ -40,3 +40,28 @@
 .read-the-docs {
   color: #888;
 }
+
+.header h1 {
+  font-family: "Lobster", sans-serif;
+  color: #FDFADA;
+}
+
+.game {
+  display: flex;
+  padding: 20px;
+}
+
+.player-name {
+  color: #02CB96;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.6rem;
+}
+
+.player-img {
+  width: 70%;
+}
+
+.play-button button{
+  background-color: #02CB96;
+  width: 20rem;
+}
