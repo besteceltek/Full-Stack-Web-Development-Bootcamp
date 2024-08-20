@@ -1,0 +1,60 @@
+.list-label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.list-value {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.person-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 10px 10px;
+}
+
+.person-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 15px;
+}
+
+.list-type {
+    font-size: 8pt;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.person {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.person-list-entry {
+
+}
+
+.person-list-entry ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.person-list-entry li {
+    display: inline-block;
+    margin-right: 10px;
+}

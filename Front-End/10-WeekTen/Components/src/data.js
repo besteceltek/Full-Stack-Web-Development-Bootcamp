@@ -33,7 +33,7 @@ export const phoneBook = [
     },
     {
         avatar: "https://i.pravatar.cc/150",
-        name: "John Doe",
+        name: "Jane Smith",
         phoneNumbers: [
             { name: "home", number: "123456789"},
             { name: "work", number: "987654321"}
@@ -43,8 +43,8 @@ export const phoneBook = [
             { name: "work", address: "5678 Main St"}
         ],
         emails: [
-            { name: "personal", email: "john@doe.com"},
-            { name: "work", email: "john@cme.com"}
+            { name: "personal", email: "jane@smith.com"},
+            { name: "work", email: "jane@cme.com"}
         ]
     }
 ]
