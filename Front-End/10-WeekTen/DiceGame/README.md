@@ -2,6 +2,8 @@
 
 A simple React-based dice game where Player 1 competes against Player 2 (the computer).
 
+[View the deployed website here!](https://dicegame-beste.netlify.app/)
+
 ## Features
 
 - **Rolling Dice Animation**: Simulates dice rolling with a 3-second animation.
