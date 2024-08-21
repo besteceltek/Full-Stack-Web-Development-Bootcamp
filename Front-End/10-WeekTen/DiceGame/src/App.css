@@ -61,7 +61,24 @@ h2 {
   width: 70%;
 }
 
-.play-button button{
-  background-color: #02CB96;
+button{
+  background-color: #02CB96 !important;
+}
+
+.play-button button {
   width: 20rem;
+}
+
+input {
+  border: 1px solid #02CB96;
+  border-radius: 5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }

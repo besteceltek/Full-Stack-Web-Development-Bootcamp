@@ -8,6 +8,8 @@ function App() {
   const [player2Roll, setPlayer2Roll] = useState(1)
   const [rolling, setRolling] = useState(false)
   const [result, setResult] = useState("Let's Play")
+  const [player1Name, setPlayer1Name] = useState("Player 1");
+  const [player1NameInput, setPlayer1NameInput] = useState("");
 
   const rollDice = () => {
     setRolling(true)
@@ -26,7 +28,7 @@ function App() {
       setPlayer2Roll(finalPlayer2Roll);
 
       if (finalPlayer1Roll > finalPlayer2Roll) {
-        setResult("Player 1 Wins!");
+        setResult(`${player1Name} Wins!`);
       } else if (finalPlayer1Roll < finalPlayer2Roll) {
         setResult("Player 2 Wins!");
       } else {
@@ -37,14 +39,26 @@ function App() {
     },2000)
   }
 
+  const handleNameChange = (e) => {
+    setPlayer1NameInput(e.target.value);
+  };
+
+  const updatePlayer1Name = () => {
+    setPlayer1Name(player1NameInput || "Player 1");
+  };
+
   return (
     <>
       <div className='header'>
         <h1>Draw! 🤝🏻</h1>
       </div>
+      <div className="input-area">
+        <input type="text" placeholder="Enter Player 1 Name" value={player1NameInput} onChange={handleNameChange} />
+        <button onClick={updatePlayer1Name}>Update Name</button>
+      </div>
       <div className='game'>
         <div className="player">
-          <h2 className='player-name'>Player 1</h2>
+          <h2 className='player-name'>{player1Name}</h2>
           <Dice face={player1Roll} />
         </div>
         <div className="player">
