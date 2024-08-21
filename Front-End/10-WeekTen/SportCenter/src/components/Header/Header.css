@@ -1,0 +1,52 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding: 10px 26.8vh;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .container .logo {
+    cursor: default;
+    height: 50px;
+}
+
+.header .container .logo img {
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 1.4rem;
+    color: var(--text-color-1);
+}
+
+.join-us-btn {
+    padding: 3px 10px;
+    border-radius: 5px;
+    background: var(--main-color-2);
+    color: var(--text-color-1);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+}

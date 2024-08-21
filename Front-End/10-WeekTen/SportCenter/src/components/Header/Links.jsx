@@ -1,0 +1,20 @@
+import { useContext } from "react"
+import { ActivePageContext } from "../../context/ActivePageProvider"
+
+function Links() {
+    const { setActivePage } = useContext(ActivePageContext)
+    return (
+        <nav class="navbar">
+            <span onClick={() => setActivePage("Home")}>Home</span>
+            <span onClick={() => setActivePage("Classes")}>Classes</span>
+            <span onClick={() => setActivePage("Trainer")}>Trainer</span>
+            <span onClick={() => setActivePage("Review")}>Review</span>
+            <span onClick={() => setActivePage("Contact")}>Contact</span>
+            <a href="#joinus">
+                <button class="join-us-btn">JOIN US</button>
+            </a>
+        </nav>
+    )
+}
+
+export default Links
