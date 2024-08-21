@@ -4,19 +4,38 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShuffle } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
-  const [player1Roll, setPlayer1Roll] = useState(1);
-  const [player2Roll, setPlayer2Roll] = useState(1);
+  const [player1Roll, setPlayer1Roll] = useState(1)
+  const [player2Roll, setPlayer2Roll] = useState(1)
+  const [rolling, setRolling] = useState(false)
+  const [result, setResult] = useState("Let's Play")
 
   const rollDice = () => {
+    setRolling(true)
     const rollInterval = setInterval(() => {
-      setPlayer1Roll(Math.floor(Math.random() * 6) + 1);
-      setPlayer2Roll(Math.floor(Math.random() * 6) + 1);
-    }, 100);
+      setPlayer1Roll(Math.floor(Math.random() * 6) + 1)
+      setPlayer2Roll(Math.floor(Math.random() * 6) + 1)
+    }, 100)
 
     setTimeout(() => {
       clearInterval(rollInterval)
-    },3000)
-  };
+
+      const finalPlayer1Roll = Math.floor(Math.random() * 6) + 1;
+      const finalPlayer2Roll = Math.floor(Math.random() * 6) + 1;
+
+      setPlayer1Roll(finalPlayer1Roll);
+      setPlayer2Roll(finalPlayer2Roll);
+
+      if (finalPlayer1Roll > finalPlayer2Roll) {
+        setResult("Player 1 Wins!");
+      } else if (finalPlayer1Roll < finalPlayer2Roll) {
+        setResult("Player 2 Wins!");
+      } else {
+        setResult("It's a Draw!");
+      }
+
+      setRolling(false)
+    },2000)
+  }
 
   return (
     <>
@@ -34,7 +53,8 @@ function App() {
         </div>
       </div>
       <div className='play-button'>
-        <button onClick={rollDice}><FontAwesomeIcon icon={faShuffle} /></button>
+        <button onClick={rollDice} disabled={rolling}><FontAwesomeIcon icon={faShuffle} /></button>
+        <h2>{result}</h2>
       </div>
     </>
   )
