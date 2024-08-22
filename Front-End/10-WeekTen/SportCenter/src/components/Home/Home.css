@@ -1,0 +1,110 @@
+.home {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 97vh;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -100;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+.home-content {
+    width: 66%;
+    position: relative;
+    margin: 10rem auto;
+    top: 8.5rem;
+}
+
+.home-content h3 {
+    padding: 3px 10px;
+    border-radius: 4px;
+    display: inline;
+    background-color: var(--main-color);
+    font-size: 1.5rem;
+}
+
+.home-content h1 {
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content p {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.3rem 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.3rem;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-buttons .btn {
+    color: var(--text-color-1);
+    padding: 0.5% 1.5%;
+    border-radius: 3px;
+}
+
+.signup {
+    background-color: var(--main-color);
+}
+
+.details {
+    border: 1px solid var(--bg-color-1); 
+    background-color: transparent;
+}
+
+.statistics {
+    width: 100%;
+    background-color: var(--bg-color-2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 6rem;
+    padding-top: 3rem;
+}
+
+.stat-block {
+    background-color: var(--bg-color-1);
+    text-align: center;
+    width: 21vh;
+    height: 10vh;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.numbers {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.texts {
+    color: var(--text-color-2);
+    font-weight: bold;
+    font-size: 1.4rem;
+}

@@ -4,11 +4,11 @@ import './Header.css'
 
 function Header() {
     return (
-        <header class="header">
-            <div class="container">
+        <header className="header">
+            <div className="container">
                 <Logo />
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
+                <div className="hamburger">
+                    <i className="fas fa-bars"></i>
                 </div>
                 <Links />
             </div>

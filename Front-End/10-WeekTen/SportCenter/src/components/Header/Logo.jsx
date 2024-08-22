@@ -1,7 +1,7 @@
 function Logo() {
     return (
         <a href="#" className="logo">
-            <img src="../public/images/logo.png" alt="" />
+            <img src="src/assets/logo.png" alt="" />
         </a>
     )
 }
