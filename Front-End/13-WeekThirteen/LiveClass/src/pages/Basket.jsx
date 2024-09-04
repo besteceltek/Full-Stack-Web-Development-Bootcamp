@@ -21,6 +21,8 @@ export default function Basket() {
           <TableRow>
             <TableCell>Products</TableCell>
             <TableCell align="right">Price</TableCell>
+            <TableCell align="right">Quantity</TableCell>
+            <TableCell align="right">Total Price</TableCell>
             <TableCell align="right">Remove</TableCell>
           </TableRow>
         </TableHead>
@@ -30,14 +32,14 @@ export default function Basket() {
               key={item.title}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
-                {item.title}
-              </TableCell>
+              <TableCell component="th" scope="row">{item.title}</TableCell>
               <TableCell align='right'>$ {item.price}</TableCell>
+              <TableCell align='right'>{item.qty}</TableCell>
+              <TableCell align='right'>{item.price * item.qty}</TableCell>
               <TableCell align='right'>
-              <Button variant="outlined" color="error" onClick={() => handleClick(item)}>
-                Remove
-              </Button>
+                <Button variant="outlined" color="error" onClick={() => handleClick(item)}>
+                  Remove
+                </Button>
               </TableCell>
             </TableRow>
           ))}

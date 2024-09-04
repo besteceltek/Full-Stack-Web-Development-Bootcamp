@@ -1,18 +1,21 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useReducer } from "react";
+import { basketReducer, initialState } from "./BasketReducer"
 
 const BasketContext = createContext()
 
 function BasketProvider({ children }) {
-  const [basket, setBasket] = useState([])
-  const addToBasket = (product) => {
-    setBasket((prev) => [...prev, product])
-  }
+  const [basket, setBasket] = useReducer(basketReducer, initialState)
+  
   const removeFromBasket = (product) => {
-    setBasket((prev) => prev.filter(item => item.id !== product.id))
+    setBasket({type: "REMOVE_FROM_BASKET", payload: product})
+  }
+
+  const addToBasket = (product) => {
+    setBasket({type: "ADD_TO_BASKET", payload: product})
   }
 
   return (
-    <BasketContext.Provider value={{basket, setBasket, addToBasket, removeFromBasket}}>
+    <BasketContext.Provider value={{basket, addToBasket, removeFromBasket}}>
       {children}
     </BasketContext.Provider>
   )

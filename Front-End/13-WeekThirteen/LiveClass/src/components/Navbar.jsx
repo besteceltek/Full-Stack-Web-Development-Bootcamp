@@ -13,6 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
+import BasketBadge from './BasketBadge';
+import BasketContext from '../context/BasketContext';
 
 //const pages = ['Products', 'Basket'];
 const pages = [
@@ -22,6 +24,9 @@ const pages = [
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
+  const { basket } = React.useContext(BasketContext)
+  const basketCount = basket.reduce((acc, item) => acc + item.qty, 0) 
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -62,7 +67,7 @@ function Navbar() {
           >
             LOGO
           </Typography>
-
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -127,6 +132,7 @@ function Navbar() {
               </Button>
             ))}
           </Box>
+          <BasketBadge />
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

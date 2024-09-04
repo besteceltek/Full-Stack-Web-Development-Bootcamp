@@ -17,11 +17,7 @@ export default function ProductsCard({ product }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={ images[0] }
-          alt="green iguana"
+        <CardMedia component="img" image={ images[0] } alt=""
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -31,7 +27,7 @@ export default function ProductsCard({ product }) {
             { description }
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
-            { price }
+            $ { price }
           </Typography>
         </CardContent>
       </CardActionArea>
