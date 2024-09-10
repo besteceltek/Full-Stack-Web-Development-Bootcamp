@@ -1,0 +1,270 @@
+.classes {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.classes .padding {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--bg-color-2);
+}
+
+.class-background {
+    position: relative;
+    background-color: var(--bg-color-4);
+    width: 100%;
+    min-height: 70vh;
+    overflow: hidden;
+    margin-bottom: 6vh;
+}
+
+.class-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -240px;
+    width: 60%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 0;
+    transform: skewX(20deg);
+    transform-origin: top left;
+}
+
+.class-background * {
+    position: relative;
+}
+
+.class-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.class-header p {
+    color: var(--text-color-3);
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 50%;
+}
+
+.class-header h2 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+.class-header hr {
+    border: 3px solid var(--main-color-2);
+    border-radius: 5px;
+    width: 50px;
+    margin-top: -25px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13rem;
+    padding: 4rem;
+}
+
+.button-group button {
+    background-color: var(--main-color);
+    color: var(--text-color-1);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.button-group button:hover {
+    background-color: var(--main-color-2);
+    box-shadow: 1px 1px 6px var(--main-color-2);
+}
+
+.button-group button::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    transition: all 0.3s;
+}
+
+.button-group button.active {
+    background-color: var(--main-color-2);
+    box-shadow: 1px 1px 6px var(--main-color-2);
+}
+
+.button-group button.active::after {
+    border-top-color: var(--main-color-2);
+}
+
+.class-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-3);
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.class-info .content {
+    display: none;
+    width: 60%;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.class-info .content h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.class-info .content p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 1.3rem 0;
+    margin-bottom: 1rem;
+}
+
+.class-info .content li {
+    line-height: 4rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    list-style: none;
+}
+
+.class-info .content img {
+    width: 400px;
+}
+
+.yoga-info, 
+.group-info, 
+.solo-info, 
+.stretching-info {
+    width: 50%;
+}
+
+.yoga-image, 
+.group-image, 
+.solo-image, 
+.stretching-image {
+    width: 50%;
+}
+
+.content.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.bmi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;;
+    width: 66%;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 50%;
+}
+
+.calculator h2 {
+    color: var(--main-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.calculator p {
+    color: var(--text-color-3);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.bmi-input {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.bmi-input input {
+    border: 1px solid var(--text-color-2);
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
+    width: 30%;
+}
+
+.bmi-input label {
+    color: var(--text-color-2);
+    font-size: 1.2rem;
+}
+
+.calculate {
+    padding: 1rem 2rem;
+}
+
+.bmi-chart-section {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.bmi-chart-section h3 {
+    color: var(--text-color-2);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.bmi-chart-section img {
+    width: 400px;
+}
+
+.bmi-triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid var(--main-color-2);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: left 0.5s ease;
+    display: none;
+}
