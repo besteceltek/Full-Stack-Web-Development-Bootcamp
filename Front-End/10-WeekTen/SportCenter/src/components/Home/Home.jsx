@@ -1,11 +1,12 @@
 import Statistics from "./Statistics"
 import "./Home.css"
+import background from "../../assets/hero-man.jpg"
 
 function Home() {
     return (
         <section className="home" id="home">
             <div className="hero-image">
-                <img src="src/assets/hero-man.jpg" alt=""/>
+                <img src={background} alt=""/>
             </div>
             <div className="home-content">
                 <h3>POWERFULL</h3>
