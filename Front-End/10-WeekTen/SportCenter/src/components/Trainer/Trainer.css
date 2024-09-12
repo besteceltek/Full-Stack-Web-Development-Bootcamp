@@ -227,3 +227,60 @@
 .add p {
     padding-top: 15px;
 }
+
+/* Media Query for screens 576px or smaller */
+@media (max-width: 576px) {
+    /* Trainer */
+
+    .trainer-images {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .trainer-image img {
+        width: 100%;
+    }
+
+    .trainer-image::before {
+        width: calc(100% - 200px);
+        left: 100px;
+    }
+
+    .trainer-image::after {
+        width: calc(100% + 16px);
+        left: -8px;
+    }
+
+    .trainer-text::before {
+        border-top: 54px solid var(--main-color);
+        border-bottom: 54px solid var(--main-color);
+    }
+
+    /* Purchase Section */
+
+    .purchase-cards {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .purchase-cards .card {
+        width: 70%;
+    }
+
+    .card-text h4 {
+        font-size: 2.2rem;
+        color: var(--text-color-2);
+    }
+
+    .card-text p {
+        font-size: 1.6rem;
+        color: var(--text-color-2);
+    }
+
+    .add i {
+        font-size: 1.6rem;
+        color: var(--text-color-2);
+    }
+}

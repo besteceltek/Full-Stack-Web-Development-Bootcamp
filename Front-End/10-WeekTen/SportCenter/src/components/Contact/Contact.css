@@ -1,0 +1,144 @@
+.contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5rem;
+    min-height: 75vh;
+}
+
+.contact .padding {
+    width: 100%;
+    height: 70px;
+    background-color: var(--bg-color-2);
+}
+
+.contact-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-header p {
+    color: var(--text-color-3);
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 50%;
+}
+
+.contact-header h2 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.contact-header hr {
+    border: 3px solid var(--main-color-2);
+    border-radius: 5px;
+    width: 50px;
+    margin-top: -25px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.left {
+    width: 400px;
+    height: 300px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: start;
+    gap: 3rem;
+    color: var(--text-color-3);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info h4 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.appoinment {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.appoinment h3 {
+    color: var(--text-color-3);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.appoinment input, .appoinment textarea {
+    background-color: var(--bg-color-2);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+.appoinment textarea {
+    padding-bottom: 4rem;
+}
+
+/* Media Query for screens 576px or smaller */
+@media (max-width: 576px) {
+    .contact .container {
+        flex-direction: column;
+        gap: 18rem;
+    }
+    
+    .contact-info h4 {
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+    
+    .contact-info p {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    .appoinment {
+        gap: 4rem;
+    }
+    
+    .appoinment h3 {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+    
+    .appoinment input, .appoinment textarea {
+        font-size: 1.8rem;
+        font-weight: 400;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+    }
+    
+    .appoinment textarea {
+        padding-bottom: 7rem;
+    }
+    
+    .contact iframe {
+        width: 500px;
+        height: 500px;
+        margin-bottom: 10rem;
+    }
+}

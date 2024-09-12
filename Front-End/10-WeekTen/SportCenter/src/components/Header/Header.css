@@ -50,3 +50,45 @@
     display: none;
     font-size: 2rem;
 }
+
+/* Media Query for screens 576px or smaller */
+@media (max-width: 576px) {
+    /* Adjust header */
+    .header {
+        padding: 10px 2rem;
+    }
+
+    .header .container .logo {
+        height: 80px;
+    }
+    
+    .header .container .logo img {
+        height: 80px;
+    }
+
+    .header .navbar {
+        display: none;
+        flex-direction: column;
+        background: var(--main-color);
+        width: 30%;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        text-align: center;
+        padding: 1rem 0;
+        border-radius: 10px;
+    }
+
+    .header .navbar.active {
+        display: flex;
+    }
+
+    .header .navbar a {
+        padding: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on small screens */
+    }
+}

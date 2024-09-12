@@ -28,7 +28,7 @@ function Trainer() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolorem nulla beatae. Nihil, nobis hic?</p>
             <div className="purchase-cards">
                 {purchases.map((purchase, index) => (
-                    <div className="card">
+                    <div key={index} className="card">
                         <img src={purchase.image} alt="" />
                         <div className="card-text">
                             <h4>{purchase.product}</h4>

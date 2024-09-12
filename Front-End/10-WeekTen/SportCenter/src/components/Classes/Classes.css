@@ -268,3 +268,94 @@
     transition: left 0.5s ease;
     display: none;
 }
+
+/* Media Query for screens 576px or smaller */
+@media (max-width: 576px) {
+    .class-background::before {
+        left: -160px;
+        width: 70%;
+        transform: skewX(5deg);
+    }
+
+    .class-header {
+        padding: 0 2rem;
+    }
+
+    .class-header p {
+        width: 90%;
+    }
+
+    .button-group {
+        flex-wrap: wrap;
+        gap: 7rem;
+    }
+    
+    .button-group button {
+        font-size: 2.2rem;
+        padding: 1rem 3rem;
+    }
+
+    .class-info .content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .class-info .content p {
+        font-size: 2rem;
+    }
+
+    .class-info .content h3 {
+        font-size: 3rem;
+    }
+
+    .class-info .content li {
+        font-size: 2rem;
+        line-height: 6rem;
+    }
+
+    .yoga-info, .group-info, .solo-info, .stretching-info {
+        width: 90%;
+    }
+
+    .yoga-image, .group-image, .solo-image, .stretching-image {
+        width: 75%;
+    }
+
+    .bmi {
+        flex-direction: column;
+        gap: 3rem;;
+        width: 90%;
+    }
+    
+    .calculator {
+        gap: 2rem;
+        width: 90%;
+    }
+    
+    .calculator h2 {
+        font-size: 5rem;
+    }
+    
+    .calculator p {
+        font-size: 2rem;
+    }
+    
+    .bmi-input {
+        flex-wrap: wrap;
+    }
+    
+    .bmi-input input {
+        border: 2px solid var(--text-color-2);
+        padding: 0.2rem 1rem;
+        width: 50%;
+        font-size: 1.6rem;
+    }
+    
+    .bmi-input label {
+        font-size: 1.6rem;
+    }
+    
+    .bmi-chart-section {
+        width: 100%;
+    }
+}

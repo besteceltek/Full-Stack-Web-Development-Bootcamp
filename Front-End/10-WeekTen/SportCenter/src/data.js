@@ -9,6 +9,8 @@ import purchase1 from './assets/purchase1.jpg'
 import purchase2 from './assets/purchase2.jpg'
 import purchase3 from './assets/purchase3.jpg'
 import purchase4 from './assets/purchase4.jpg'
+import client1 from './assets/client1.jpg'
+import client2 from './assets/client2.jpg'
 
 export const statistics = [
     {number: 325, text: "Course"},
@@ -145,10 +147,17 @@ export const purchases = [
     }
 ]
 
-
-
-export const personListTypes = [
-    {title: "Phone Numbers", fieldname: "phoneNumbers", labelField: "name", valueField: "number"},
-    {title: "Addresses", fieldname: "addresses", labelField: "name", valueField: "address"},
-    {title: "Emails", fieldname: "emails", labelField: "name", valueField: "email"}
+export const clients = [
+    {
+        image: client1,
+        name: "Diet Expert",
+        title: "CFO",
+        comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, error facilis. At reiciendis nulla sunt illum quis ratione eaque fugiat repellat laborum ipsa, itaque veniam aliquid. Voluptas non sit fuga."
+    },
+    {
+        image: client2,
+        name: "Cardio Trainer",
+        title: "CEO",
+        comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, error facilis. At reiciendis nulla sunt illum quis ratione eaque fugiat repellat laborum ipsa, itaque veniam aliquid. Voluptas non sit fuga."
+    },
 ]
