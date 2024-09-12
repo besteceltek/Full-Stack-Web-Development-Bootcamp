@@ -81,9 +81,9 @@ function Classes() {
                 <p>Laborum quas dolorum nihil quod maiores, autem eveniet rerum necessitatibus? Sit soluta officiis veniam! Ut dolores eos iusto eligendi exercitationem.</p>
                 <div className="bmi-input">
                     <input type="number" name="height" id="height" placeholder="Your Height" />
-                    <label for="height">cm</label>
+                    <label htmlFor="height">cm</label>
                     <input type="number" name="weight" id="weight" placeholder="Your Weight" />
-                    <label for="weight">kg</label>
+                    <label htmlFor="weight">kg</label>
                     <button className="calculate" onClick={calculateBmi}>Calculate</button>
                 </div>
             </div>

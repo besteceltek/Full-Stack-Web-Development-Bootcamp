@@ -2,6 +2,13 @@ import yogaImage from './assets/yoga.jpg'
 import groupImage from './assets/group.webp'
 import soloImage from './assets/solo.jpg'
 import stretchingImage from './assets/stret.webp'
+import trainer1 from './assets/trainer1.jpg'
+import trainer2 from './assets/trainer2.jpg'
+import trainer3 from './assets/trainer3.jpg'
+import purchase1 from './assets/purchase1.jpg'
+import purchase2 from './assets/purchase2.jpg'
+import purchase3 from './assets/purchase3.jpg'
+import purchase4 from './assets/purchase4.jpg'
 
 export const statistics = [
     {number: 325, text: "Course"},
@@ -93,6 +100,50 @@ export const classes = [
     },
 ]
 
+export const trainers = [
+    {
+        image: trainer1,
+        name: "Jane Doe",
+        class: "Fitness Trainer"
+    },
+    {
+        image: trainer2,
+        name: "Jane Doe",
+        class: "Fitness Trainer"
+    },
+    {
+        image: trainer3,
+        name: "Jane Doe",
+        class: "Fitness Trainer"
+    }
+]
+
+export const purchases = [
+    {
+        image: purchase1,
+        product: "Kettlebell / 5kg",
+        price: "89,99",
+        discount: "59,99",
+    },
+    {
+        image: purchase2,
+        product: "Treadmill",
+        price: "899,99",
+        discount: "599,99",
+    },
+    {
+        image: purchase3,
+        product: "Adjustable Dumbbell",
+        price: "89,99",
+        discount: "59,99",
+    },
+    {
+        image: purchase4,
+        product: "Kettlebell / 3kg",
+        price: "89,99",
+        discount: "59,99",
+    }
+]
 
 
 
@@ -101,23 +152,3 @@ export const personListTypes = [
     {title: "Addresses", fieldname: "addresses", labelField: "name", valueField: "address"},
     {title: "Emails", fieldname: "emails", labelField: "name", valueField: "email"}
 ]
-
-
-
-/*
-<div class="content active" id="yoga">
-    <div class="yoga-info">
-        <h3>Yoga Classes</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia error iure incidunt dolorum adipisci? Maiores porro ex, placeat itaque exercitationem velit, vitae cumque, rerum obcaecati repellendus iste! Illum, labore animi?</p>
-        <h3>When is the Class Time?</h3>
-        <ul>
-            <li>Saturday-Sunday: 8:00am - 10:00am</li>
-            <li>Monday-Tuesday: 10:00am - 12:00pm</li>
-            <li>Wednesday-Friday: 3:00pm - 6:00pm</li>
-        </ul>
-    </div>
-    <div class="yoga-image">
-        <img src="/images/yoga.jpg" alt="">
-    </div>
-</div>
-*/

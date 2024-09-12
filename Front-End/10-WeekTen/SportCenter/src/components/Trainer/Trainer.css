@@ -1,0 +1,229 @@
+.trainer {
+    position: relative;
+    text-align: center;
+    padding-top: 70px;
+    min-height: 100vh;
+}
+
+.trainer p {
+    color: var(--text-color-3);
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 50%;
+    margin-top: -15px;
+}
+
+.trainer h2 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+.trainer hr {
+    border: 3px solid var(--main-color-2);
+    border-radius: 5px;
+    width: 50px;
+    margin-top: -25px;
+}
+
+.trainers {
+    background-color: var(--bg-color-2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4vh;
+    padding: 3rem 0;
+}
+
+.trainer-images {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.trainer-image {
+    position: relative;
+    display: inline-block;
+}
+
+.trainer-image::before,
+.trainer-image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.trainer-image::before {
+    border-top: 8px solid var(--main-color);
+    border-bottom: 8px solid var(--main-color);
+    box-sizing: border-box;
+    width: calc(100% - 240px);
+    height: calc(100% + 11px);
+    top: -8px;
+    left: 120px;
+}
+
+.trainer-image::after {
+    border-left: 8px solid var(--main-color);
+    border-right: 8px solid var(--main-color);
+    box-sizing: border-box;
+    width: calc(100% - 75px);
+    height: calc(100% - 200px);
+    top: 100px;
+    left: 37px;
+}
+
+.trainer-image:hover .trainer-text{
+    opacity: 1;
+}
+
+.trainer-image img {
+    position: relative;
+    width: 70%;
+    border: 1px solid var(--main-color-2);
+    border-radius: 3%;
+}
+
+.trainer-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 30%;
+    bottom: 15px;
+    left: 50%;
+    gap: 4px;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+}
+
+.trainer-text::before,
+.trainer-text::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+.trainer-text::before {
+    border-top: 38px solid var(--main-color);
+    border-bottom: 38px solid var(--main-color);
+    box-sizing: border-box;
+    width: calc(100% - 60px);
+    height: 100%;
+    left: 30px;
+}
+
+.trainer-text::after {
+    border-left: 38px solid var(--main-color);
+    border-right: 38px solid var(--main-color);
+    box-sizing: border-box;
+    width: calc(100%);
+    height: calc(100% - 20px);
+    top: 10px;
+}
+
+.trainer-text h4, .trainer-text p {
+    margin: 0;
+    color: var(--text-color-1);
+    font-weight: 500;
+}
+
+.trainer-text h4 {
+    font-size: 1.7rem;
+}
+
+.trainer-text p {
+    font-size: 1rem;
+    margin-bottom: 1px;
+}
+
+.purchase {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4vh;
+    padding: 3rem 0;
+}
+
+.purchase-cards {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2%;
+}
+
+.purchase-cards .card {
+    width: 15%;
+    padding-bottom: 1.5rem;
+    box-shadow: 0 4px 4px 0 rgba(142, 142, 142, 0.3), 0 10px 10px 0 rgba(142, 142, 142, 0.3);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.purchase-cards .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
+    transition: all 0.2s ease-in;
+}
+
+.purchase-cards .card img {
+    width: 100%;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--text-color-3);
+}
+
+.card-text h4 {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.card-text p {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.card-text p span {
+    text-decoration: line-through;
+}
+
+.add {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.add p {
+    padding-top: 15px;
+}
