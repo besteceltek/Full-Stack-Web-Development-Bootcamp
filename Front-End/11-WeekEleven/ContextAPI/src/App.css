@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10%;
+  background-color: aliceblue;
+  margin-bottom: 30px;
+}
+
+.links {
+  display: flex;
+  gap: 30px;
+}
+
+.links span {
+  cursor: pointer;
+}
