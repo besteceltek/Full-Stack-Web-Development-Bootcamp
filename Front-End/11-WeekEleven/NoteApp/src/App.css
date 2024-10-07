@@ -1,0 +1,54 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.filter-area {
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  margin: 1em;
+  border-radius: 20px;
+  border: 1px solid #777777de;
+}
+
+.note-area {
+  padding: 1rem;
+  background-color: white;
+  height: 7rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.text-area {
+  border: none;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  padding-bottom: 0.5rem;
+}
+
+.add-button {
+  background-color: #45C667;
+  color: white;
+  border-radius: 20px;
+  width: 110px;
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.note {
+  height: 20px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
