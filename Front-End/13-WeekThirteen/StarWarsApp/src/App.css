@@ -1,0 +1,75 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem;
+  text-align: center;
+}
+
+.logo img {
+  width: 40%;
+  padding-bottom: 5rem;
+}
+
+.ship-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  overflow-x: hidden;
+  padding: 3rem 0;
+}
+
+.ship-card {
+  background-color: #121423;
+  border-radius: 3rem;
+  height: 20rem;
+  padding: 1rem;
+}
+
+.ship-card img {
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.ship-card h3 {
+  margin: 0.4rem;
+}
+
+.ship-info {
+  text-align: left;
+  font-size: 1rem;
+  padding: 0 2rem;
+}
+
+.filter-area {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.filter-area input {
+  background-color: #351111;
+  color: #ADAEDA;
+  border: 1px solid white;
+  width: 15rem;
+  height: 35px;
+  border-radius: 5rem;
+  padding-left: 15px;
+  font-size: 1.2rem;
+}
+
+.filter-area button, button {
+  background-color: #267fb3;
+  border: 1px solid #0b344c;
+  width: 10rem;
+  height: 40px;
+  border-radius: 5rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+hr {
+  width: 40%;
+  border: 1px solid #302E29;
+}
