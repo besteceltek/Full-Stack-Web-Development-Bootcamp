@@ -1,6 +1,181 @@
-.container {
+.app {
   color: #333;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.title {
+  font-size: 32px;
+  background-color: white;
+  padding: 30px 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.header-img {
+  display: block;
+  width: 125px;
+  height: 125px;
+  margin: 10px auto 25px;
+  border-radius: 50%;
+}
+
+.money-bar {
+  color: white;
+  background: linear-gradient(180deg, #2ecc71, #1abc9c);
+  padding: 20px;
+  margin: 10px 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  top: 0;
+  position: sticky;
+  z-index: 9999;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 10px 10px;
+}
+
+.item-wrapper {
+  max-width: 100%;
+  background-color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 15px;
+}
+
+.item-img {
+  display: block;
+  margin: 15px auto;
+  height: 120px;
+  max-width: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.item-name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.item-price {
+  font-size: 20px;
+  color: #24c486;
+}
+
+.item-controls {
+  font-size: 20px;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px 10px;
+  margin-top: 25px;
+}
+
+.item-sell {
+  background: linear-gradient(180deg, #f53b82, #f53b57);
+}
+
+.item-buy {
+  background: linear-gradient(180deg, #2ecc71, #1abc9c);
+}
+
+.item-input, button {
+  font-size: 16px;
+  text-align: center;
+}
+
+.item-input {
+  padding: 9px 12px;
+  border-radius: 3px;
+  border: 1px solid #b2bec3;
+  color: #333;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.item-input::-webkit-outer-spin-button,
+.item-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-weight: 700;
+}
+
+button:disabled {
+  background: #f1f2f6;
+  border: none;
+  color: #333;
+  cursor: auto;
+  touch-action: manipulation;
+}
+
+.receipt-wrapper {
+  margin-top: 10px;
+  max-width: 100%;
+  font-size: 18px;
+  padding: 15px 15px 30px;
+}
+
+.receipt-wrapper, .receipt-title {
+  background-color: white;
+  text-align: center;
+}
+
+.receipt-title {
+  font-size: 28px;
+  font-weight: 700;
+  padding: 15px 15px 25px;
+}
+
+.receipt-items {
+  max-width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-gap: 10px 0;
+  grid-template-columns: 170px 45px 75px;
+}
+
+.receipt-item-name {
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.receipt-item-amount {
+  text-align: left;
+}
+
+.receipt-item-cost, .receipt-total-cost {
+  color: #24c486;
+  text-align: right;
+}
+
+.receipt-item-cost {
+  font-weight: 700;
+}
+
+.receipt-total {
+  max-width: 300px;
+  font-weight: 700;
+  border-top: 1px solid #333;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
